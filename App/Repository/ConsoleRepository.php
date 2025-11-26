@@ -24,7 +24,20 @@ class ConsoleRepository
      * @throws \Exception Erreurs SQL
      */
     public function findAllConsoles(): array 
-    {
-        return [];
+    {   
+        try{
+            //== écrire une requête SQL SELECT
+            $sql = "SELECT id_console FROM console WHERE id_console = ?";
+            //== préparer la requête
+            $req = $this->connect->prepare($sql);
+            //== Exécuter la requête
+            $req->execute();
+            //== FetchAll
+            $consoles = $req->fetchAll(\PDO::FETCH_ASSOC);
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+        return [$consoles];
     }
 }
