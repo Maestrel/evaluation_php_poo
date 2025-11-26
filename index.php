@@ -10,7 +10,10 @@ $path = isset($url["path"]) ? $url["path"] : "/";
 //Import des classes
 use App\Controller\HomeController;
 use App\Controller\GameController;
+
 //Instance des controllers
+$homeController = new HomeController();
+$gameController = new GameController();
 
 //Router
 switch ($path) {
