@@ -92,7 +92,7 @@ class GameController extends AbstractController
     public function showAllGames(): mixed 
     {
         //== Récupération de la liste des consoles
-        return "template avec la méthode render";
+        //return $this->render("", "", $data);
     }
 
 

@@ -3,13 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <title>Add Game</title>
+    <title>Show All Game</title>
 </head>
 <body>
     <?php include 'component/navbar.php'?>
     <main class="container">
     <h1>Tous les jeux</h1>
-    
     </main>
 </body>
 </html>

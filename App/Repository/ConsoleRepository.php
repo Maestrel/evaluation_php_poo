@@ -27,7 +27,7 @@ class ConsoleRepository
     {   
         try{
             //== écrire une requête SQL SELECT
-            $sql = "SELECT id_console FROM console WHERE id_console = ?";
+            $sql = "SELECT c.id, c.name, c.manufacturer FROM console AS c";
             //== préparer la requête
             $req = $this->connect->prepare($sql);
             //== Exécuter la requête
@@ -38,6 +38,6 @@ class ConsoleRepository
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
-        return [$consoles];
+        return $consoles;
     }
 }

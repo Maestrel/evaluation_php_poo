@@ -24,9 +24,8 @@
                 <option disabled>
                     Séléctionner une console de jeu vidéo...
                 </option>
-                <?php foreach ($console["id"] as $console) :?>
+                <?php foreach ($data["consoles"] as $console) :?>
                     <option value="<?= $console["id"] ?>"><?= $console["name"] ?></option>
-                    
                 <?php endforeach ?>
             </select>
         </fieldset>
